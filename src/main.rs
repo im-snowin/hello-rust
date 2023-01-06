@@ -8,19 +8,19 @@ struct Person {
 
 fn main() {
     
-    let person = Person{
+    let person1: Person= Person{
         name: String::from("snowin"),
         age: 18,
         email: String::from("snowin@gmail.com"),
     };
 
-    // Let us print the person
-    println!("Name: {}", person.name);
-    println!("Age: {}", person.age);
-    println!("Email: {}\n", person.email);
+    // Let us print the person1
+    println!("Name: {}", person1.name);
+    println!("Age: {}", person1.age);
+    println!("Email: {}\n", person1.email);
     
     // Let us destruct the preson
-    let Person {name, age, email} = person;
+    let Person {name, age, email} = person1;
     
     println!("Name: {}", name);
     println!("Age: {}", age);
