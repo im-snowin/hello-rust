@@ -7,7 +7,7 @@ struct Person {
 
 
 fn main() {
-    
+
     let person1: Person= Person{
         name: String::from("snowin"),
         age: 18,
@@ -18,10 +18,10 @@ fn main() {
     println!("Name: {}", person1.name);
     println!("Age: {}", person1.age);
     println!("Email: {}\n", person1.email);
-    
+
     // Let us destruct the preson
     let Person {name, age, email} = person1;
-    
+
     println!("Name: {}", name);
     println!("Age: {}", age);
     println!("Email: {}\n", email);
