@@ -1,18 +1,40 @@
+#[derive(Debug)]
+struct Person {
+    name: String,
+    age: i8,
+    email: String
+}
 
 
 fn main() {
-  let mut point: (i64, i32, i8) = (120, 32, 2);
-  
-  let x = point.0;
-  let y = point.1;
-  let z = point.2;
+    
+    let person1: Person= Person{
+        name: String::from("snowin"),
+        age: 18,
+        email: String::from("snowin@gmail.com"),
+    };
 
-  println!("{}, {}, {}", x,y,z);
+    // Let us print the person1
+    println!("Name: {}", person1.name);
+    println!("Age: {}", person1.age);
+    println!("Email: {}\n", person1.email);
+    
+    // Let us destruct the preson
+    let Person {name, age, email} = person1;
+    
+    println!("Name: {}", name);
+    println!("Age: {}", age);
+    println!("Email: {}\n", email);
 
-  println!("{:?}", point);
+    // lets mut struct
+    let mut person2 = Person{
+        name: String::from("mark"),
+        age: 23,
+        email: String::from("mark@gmail.com"),
+    };
 
-  point.0 = 2000;
+    person2.name = String::from("Mark Henry");
 
-  println!("{:?}", point)
-  
+    println!("{:#?}", person2)
+
 }
