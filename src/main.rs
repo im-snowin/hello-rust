@@ -1,40 +1,17 @@
-#[derive(Debug)]
-struct Person {
-    name: String,
-    age: i8,
-    email: String
-}
-
-
 fn main() {
     
-    let person1: Person= Person{
-        name: String::from("snowin"),
-        age: 18,
-        email: String::from("snowin@gmail.com"),
-    };
+    let mut years: [i32; 3] = [1920, 1947, 2002];
 
-    // Let us print the person1
-    println!("Name: {}", person1.name);
-    println!("Age: {}", person1.age);
-    println!("Email: {}\n", person1.email);
+    println!("{:?}", years);
     
-    // Let us destruct the preson
-    let Person {name, age, email} = person1;
+    years[2] = 1988;
     
-    println!("Name: {}", name);
-    println!("Age: {}", age);
-    println!("Email: {}\n", email);
+    println!("{:?}", years);
 
-    // lets mut struct
-    let mut person2 = Person{
-        name: String::from("mark"),
-        age: 23,
-        email: String::from("mark@gmail.com"),
-    };
+    for year in years.iter() {
+        println!("Next year: {}", year + 1);
+    }
 
-    person2.name = String::from("Mark Henry");
-
-    println!("{:#?}", person2)
-
+    let names: [&str; 4] = ["snowin", "mark", "kalo", "john"];
+    println!("{:?}", names)
 }
